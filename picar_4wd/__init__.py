@@ -84,9 +84,10 @@ STEP = 18
 us_step = STEP
 angle_distance = [0,0]
 current_angle = 0
-max_angle = ANGLE_RANGE/2
-min_angle = -ANGLE_RANGE/2
+max_angle = ANGLE_RANGE/2 #90
+min_angle = -ANGLE_RANGE/2 - STEP #-90 - 18
 scan_list = []
+angle_list = []
 
 errors = []
 
@@ -124,34 +125,39 @@ def get_distance_at(angle):
 def get_status_at(angle, ref1=35, ref2=10):
     dist = get_distance_at(angle)
     if dist > ref1 or dist == -2:
-        return 2
+        return 2 # no object within 35cm
     elif dist > ref2:
-        return 1
+        return 1 # some object within 10-35cm
     else:
-        return 0
+        return 0 #some object within 10cm
 
-def scan_step(ref):
-    global scan_list, current_angle, us_step
-    current_angle += us_step
-    if current_angle >= max_angle:
-        current_angle = max_angle
-        us_step = -STEP
-    elif current_angle <= min_angle:
-        current_angle = min_angle
-        us_step = STEP
-    status = get_status_at(current_angle, ref1=ref)#ref1
+def scan_step(ref1, ref2):
+    global scan_list, current_angle, us_step, angle_list
+    current_angle += us_step #add angle step to the current angle
+    if current_angle >= max_angle: #if current_angle is equal to or greater than 90
+        current_angle = max_angle #then set current angle to 90
+        us_step = -STEP             #and set step angle to -18
+    elif current_angle <= min_angle: #if current_angle is equal to or less than -90
+        current_angle = min_angle #then set current angle to 90
+        us_step = STEP              #and set step angle to 18
+    status = get_status_at(current_angle, ref1, ref2)#ref1    #get scan status at current angle with 'ref' distance values
 
     scan_list.append(status)
+    angle_list.append(current_angle) #added to capture scanned angles
+    # print('Scanned at angle={} and got status {}'.format(current_angle, status))
     if current_angle == min_angle or current_angle == max_angle:
-        if us_step < 0:
+        if us_step < 0: #if angle step is negative
             # print("reverse")
             scan_list.reverse()
+            angle_list.reverse()
         # print(scan_list)
         tmp = scan_list.copy()
+        angle_list_copy=angle_list.copy()
         scan_list = []
-        return tmp
+        angle_list = []
+        return tmp, angle_list_copy #if it has reached -90 or 90, then process and return the list of readings
     else:
-        return False
+        return (False, False) #else just return False
 
 ########################################################
 # Motors

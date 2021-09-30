@@ -1,0 +1,91 @@
+Install dependency
+ - update apt-get... Done
+ - install pip... Done
+ - install sysstat... Done
+ - install i2c-tools... Done
+Setup interfaces
+ - turn on I2C... Done
+ - Add I2C module... Done
+ - copy picar-4wd-config... Done
+ - change directory owner... Done
+Setup picar-4wd web-example service
+ - copy picar-4wd web-example file... Done
+ - add excutable mode for picar-4wd-web-example... Done
+running install
+running bdist_egg
+running egg_info
+writing picar_4wd.egg-info/PKG-INFO
+writing dependency_links to picar_4wd.egg-info/dependency_links.txt
+writing entry points to picar_4wd.egg-info/entry_points.txt
+writing requirements to picar_4wd.egg-info/requires.txt
+writing top-level names to picar_4wd.egg-info/top_level.txt
+reading manifest file 'picar_4wd.egg-info/SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'picar_4wd.egg-info/SOURCES.txt'
+installing library code to build/bdist.linux-armv7l/egg
+running install_lib
+running build_py
+copying picar_4wd/__init__.py -> build/lib/picar_4wd
+creating build/bdist.linux-armv7l/egg
+creating build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/utils.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/pin.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/servo.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/adc.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/filedb.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/speed.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/i2c.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/ultrasonic.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/pwm.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/__init__.py -> build/bdist.linux-armv7l/egg/picar_4wd
+copying build/lib/picar_4wd/motor.py -> build/bdist.linux-armv7l/egg/picar_4wd
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/utils.py to utils.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/pin.py to pin.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/servo.py to servo.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/adc.py to adc.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/filedb.py to filedb.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/speed.py to speed.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/i2c.py to i2c.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/ultrasonic.py to ultrasonic.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/pwm.py to pwm.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/__init__.py to __init__.cpython-37.pyc
+byte-compiling build/bdist.linux-armv7l/egg/picar_4wd/motor.py to motor.cpython-37.pyc
+creating build/bdist.linux-armv7l/egg/EGG-INFO
+copying picar_4wd.egg-info/PKG-INFO -> build/bdist.linux-armv7l/egg/EGG-INFO
+copying picar_4wd.egg-info/SOURCES.txt -> build/bdist.linux-armv7l/egg/EGG-INFO
+copying picar_4wd.egg-info/dependency_links.txt -> build/bdist.linux-armv7l/egg/EGG-INFO
+copying picar_4wd.egg-info/entry_points.txt -> build/bdist.linux-armv7l/egg/EGG-INFO
+copying picar_4wd.egg-info/not-zip-safe -> build/bdist.linux-armv7l/egg/EGG-INFO
+copying picar_4wd.egg-info/requires.txt -> build/bdist.linux-armv7l/egg/EGG-INFO
+copying picar_4wd.egg-info/top_level.txt -> build/bdist.linux-armv7l/egg/EGG-INFO
+creating 'dist/picar_4wd-0.0.1-py3.7.egg' and adding 'build/bdist.linux-armv7l/egg' to it
+removing 'build/bdist.linux-armv7l/egg' (and everything under it)
+Processing picar_4wd-0.0.1-py3.7.egg
+removing '/usr/local/lib/python3.7/dist-packages/picar_4wd-0.0.1-py3.7.egg' (and everything under it)
+creating /usr/local/lib/python3.7/dist-packages/picar_4wd-0.0.1-py3.7.egg
+Extracting picar_4wd-0.0.1-py3.7.egg to /usr/local/lib/python3.7/dist-packages
+picar-4wd 0.0.1 is already the active version in easy-install.pth
+Installing picar-4wd script to /usr/local/bin
+
+Installed /usr/local/lib/python3.7/dist-packages/picar_4wd-0.0.1-py3.7.egg
+Processing dependencies for picar-4wd==0.0.1
+Searching for websockets==9.1
+Best match: websockets 9.1
+Processing websockets-9.1-py3.7-linux-armv7l.egg
+websockets 9.1 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python3.7/dist-packages/websockets-9.1-py3.7-linux-armv7l.egg
+Searching for smbus==1.1.post2
+Best match: smbus 1.1.post2
+Processing smbus-1.1.post2-py3.7-linux-armv7l.egg
+smbus 1.1.post2 is already the active version in easy-install.pth
+
+Using /usr/local/lib/python3.7/dist-packages/smbus-1.1.post2-py3.7-linux-armv7l.egg
+Searching for RPi.GPIO==0.7.0
+Best match: RPi.GPIO 0.7.0
+Adding RPi.GPIO 0.7.0 to easy-install.pth file
+
+Using /usr/lib/python3/dist-packages
+Finished processing dependencies for picar-4wd==0.0.1
+Setup Finished
+If you want to reboot please press y, if not press n

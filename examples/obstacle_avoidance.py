@@ -4,7 +4,7 @@ speed = 30
 
 def main():
     while True:
-        scan_list = fc.scan_step(35)
+        scan_list = fc.scan_step(25, 10) #added ref2 due to modification in init.py
         if not scan_list:
             continue
 
